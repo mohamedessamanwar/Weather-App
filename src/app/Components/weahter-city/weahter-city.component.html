@@ -1,0 +1,44 @@
+<div class="container mt-4">
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <select
+      class="form-control form-select"
+      [(ngModel)]="CityId"
+      (change)="filterByCityId()"
+      aria-label="Select a City"
+    >
+      <option *ngFor="let city of cityIdList" [value]="city.id">
+        {{ city.city }}
+      </option>
+    </select>
+  </div>
+  
+  <div *ngIf="isCitySelected; else noCitySelected">
+    <!-- Weather Cards -->
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-2">
+      <div class="col" *ngFor="let forecast of WeatherObj.forecast">
+        <div class="card shadow-sm border-0">
+          <div class="card-body text-center">
+            <h6 class="card-title text-primary mb-1">
+              {{ WeatherObj.city }}
+            </h6>
+            <p class="card-text mb-1">
+              <strong>Date:</strong> {{ forecast.date }}
+            </p>
+            <p class="card-text mb-1">
+              <strong>Temp:</strong> {{ forecast.temperatureCelsius }}°C
+            </p>
+            <p class="card-text mb-1">
+              <strong>Humidity:</strong> {{ forecast.humidity }}%
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #noCitySelected>
+    <p class="text-center text-muted">
+      Please choose a city to view the weather forecast.
+    </p>
+  </ng-template>
+</div>

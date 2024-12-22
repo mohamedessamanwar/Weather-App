@@ -1,0 +1,76 @@
+.container {
+  font-family: 'Arial', sans-serif;
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.card-text strong {
+  color: #343a40;
+}
+
+h1 {
+  font-weight: bold;
+  color: #007bff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+input[type='date'] {
+  max-width: 200px;
+}
+
+button.btn-primary {
+  transition: background-color 0.3s;
+}
+
+button.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.card {
+  margin-top: 15px;
+}
+.date-picker .input-group {
+  max-width: 300px; /* Restrict width for a compact design */
+}
+
+.date-picker .input-group-text {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+}
+
+.date-picker input[type='date'] {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.date-picker input[type='date']:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.date-picker .form-label {
+  color: #343a40;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
